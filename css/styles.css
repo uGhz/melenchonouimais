@@ -2,12 +2,11 @@
 Red: #c9462c;
 White: rgb(255, 255, 255);
 Blue: rgb(8, 126, 215);
-*/
-/*
-html {
-	background: url("../img/shattered.png") #e0e0e0 repeat center center fixed;
-	height: 100%;
-}
+
+Media Query Breakpoints :
+- (max-width: 800px)
+- (max-width: 530px)
+
 */
 	body {
 	  height: 100%;
@@ -30,19 +29,31 @@ html {
 	  background-image: url("../img/bg_mask.png");
 	}
 	
+	.page-container {
+		height: 100%;
+    	position: relative;
+    	/* margin: 0 0 250px 0; */
+	}
+
+	.main-content {
+		z-index: 10;
+    	position: relative;
+    /* 	padding: 0 0 250px 0; */
+	}
+	
 	.accroche-accueil {
     	font-weight: 700;
     	font-size: 45px;
 	}
 	
-	.wrapper-ughz {
+	.encart-accueil {
 	    /* display: block; */
 	    margin: auto;
 	    max-width: 800px;
 	    padding: 20px;
 	    /* vertical-align: middle; */
-	    margin-top: 50vh;
-	    transform: translateY(-50%);
+/* 	    margin-top: 50vh;
+	    transform: translateY(-50%); */
 	    text-align: center;
 	    /* overflow-y: auto; */
 	    font-family: "Roboto","Helvetica","Arial",sans-serif;
@@ -76,9 +87,9 @@ html {
 
 
 html {
-	background: url("../img/jean-luc-melenchon.jpg") no-repeat center center fixed;
+/* 	background: url("../img/jean-luc-melenchon.jpg") no-repeat center center fixed;
 	background-size: cover;
-	height: 100%;
+	height: 100%; */
 }
 
 body {
@@ -372,8 +383,8 @@ content: "";
 }
 
 .footer {
-/* 	width: 100%;
-	height: 200px; */
+/* 	width: 100%; */
+/*	height: 200px; */
 	padding: 60px 50px 50px 50px;
 	background-color: #0098b6;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
@@ -382,6 +393,15 @@ content: "";
 	z-index: 1;
 	font-family: "Roboto","Helvetica","Arial",sans-serif;
     color: white;
+}
+
+.footer.accueil {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5em;
+    /* height: 250px; */
 }
 
 .created-by {
@@ -582,6 +602,12 @@ a:hover {
 
 	#gray-screen {
 		display: none !important;
+	}
+	
+	.footer.accueil {
+		position: relative;
+		/* bottom: 0;*/	
+		height: auto;
 	}
 	
 	/** Colonnage **/
